@@ -14,6 +14,17 @@ package com.xxy.剑指offer;
 public class KthNode {
 
 
+	/**
+	 *
+	 * @param head
+	 * @param k
+	 * @return
+	 *
+	 * 准备两个节点，让一个节点先走k-1步，另一个再开始走
+	 * 	第一个节点走到尽头的时候，第二个节点就是倒数第k个
+	 *
+	 */
+
 	public ListNode FindKthToTail(ListNode head,int k) {
 
 		//处理null节点和 k = 0
