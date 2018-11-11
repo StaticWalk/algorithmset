@@ -23,8 +23,11 @@ public class TwoDArray {
 	 *		 {2, 4,  9, 12}
 	 * 		 {4, 7, 10, 13}
 	 * 		 {6, 8, 11, 15}
-	 * 从右上角开始缩小范围，从右往左，从上到下
-	 * 如例从右往左先确定最可能的列数，此处是第二列
+	 * 从右上角开始缩小范围，从右往左，从下到上
+	 * 如例
+	 * 1.从右往左先确定最可能的列数，此处是第二列
+	 * 2.再在第二列中从下往上找到等于7或者第一个大于7的数字
+	 * 3.如果2中没有找到，停留在同一行，在最近的大于7的一行往左边找
 	 *
 	 */
 
@@ -61,8 +64,10 @@ public class TwoDArray {
 		int target = 1;
 
 		System.err.println(t.Find(target,array));
-		System.err.println(array.length);
 
+
+//		Random a =new Random();
+//		System.err.println(a.nextInt(200000000));
 
 	}
 }
