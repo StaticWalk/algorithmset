@@ -14,7 +14,7 @@ public class BubbleSort {
 
 
 		//冒泡
-		/**
+
 		 for (int i = 0; i <a.length-1 ; i++) {
 		 for (int j = 0; j <a.length-i-1; j++) {
 		 if (a[j] > a[j+1]){
@@ -23,7 +23,7 @@ public class BubbleSort {
 		 a[j] = tmp;
 		 }
 		 }
-		 }*/
+		 }
 
 		//冒泡优化，如果提前排序结束，一次没有出现交换就说明交换完成了，直接结束遍历
 		//因为使用了while循环，第一个for需要换个写法
