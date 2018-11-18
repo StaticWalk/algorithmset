@@ -1,4 +1,4 @@
-package com.xxy.剑指offer;
+package com.xxy.jianzhioffer;
 
 import org.junit.Test;
 
