@@ -18,15 +18,16 @@ import org.junit.Test;
  */
 public class RoboticMove {
 
-	public int movingCount(int threshold, int rows, int cols)
-	{
-		if (threshold<0 || rows<1 || cols<1){
+
+	public int movingCount(int threshold,int rows,int cols){
+
+		if (threshold <0 ||rows<1 ||cols<1 ){
 			return 0;
 		}
 
+		int count;
 		boolean[] visited = new boolean[rows*cols];
-
-		int count = movingCountCore(threshold,rows,cols,0,0,visited);
+		count=movingCountCore(threshold,rows,cols,0,0,visited);
 
 		return count;
 
@@ -36,19 +37,53 @@ public class RoboticMove {
 
 		int count = 0;
 
-		if (check(threshold,rows,cols,i,j,visited)){
+		if (i<rows&&j<cols&&i>=0&&j>=0
+				&&!visited[i*cols+j]
+				&&getDigitSum(i)+getDigitSum(j)<=threshold){
 
 			visited[i*cols+j]=true;
 
-			count=1+ movingCountCore(threshold,rows,cols,i-1,j,visited)
-					+ movingCountCore(threshold,rows,cols,i+1,j,visited)
-					+ movingCountCore(threshold,rows,cols,i,j-1,visited)
-					+ movingCountCore(threshold,rows,cols,i,j+1,visited);
+			count=1+movingCountCore(threshold,rows,cols,i+1,j,visited)
+					+movingCountCore(threshold,rows,cols,i-1,j,visited)
+					+movingCountCore(threshold,rows,cols,i,j-1,visited)
+					+movingCountCore(threshold,rows,cols,i,j+1,visited);
 
 		}
 
 		return count;
 	}
+
+
+//	public int movingCount(int threshold, int rows, int cols)
+//	{
+//		if (threshold<0 || rows<1 || cols<1){
+//			return 0;
+//		}
+//
+//		boolean[] visited = new boolean[rows*cols];
+//
+//		int count = movingCountCore(threshold,rows,cols,0,0,visited);
+//
+//		return count;
+//
+//	}
+//	private int movingCountCore(int threshold, int rows, int cols, int i, int j, boolean[] visited) {
+//
+//		int count = 0;
+//
+//		if (check(threshold,rows,cols,i,j,visited)){
+//
+//			visited[i*cols+j]=true;
+//
+//			count=1+ movingCountCore(threshold,rows,cols,i-1,j,visited)
+//					+ movingCountCore(threshold,rows,cols,i+1,j,visited)
+//					+ movingCountCore(threshold,rows,cols,i,j-1,visited)
+//					+ movingCountCore(threshold,rows,cols,i,j+1,visited);
+//
+//		}
+//
+//		return count;
+//	}
 
 	private boolean check(int threshold, int rows, int cols, int i, int j, boolean[] visited) {
 		if (i>=0 && j>=0 && i<rows && j<cols
@@ -70,12 +105,16 @@ public class RoboticMove {
 		return sum;
 	}
 
+
+
+
+
+
 	@Test
 	public void test(){
 		RoboticMove rm = new RoboticMove();
-//		System.err.println(rm.movingCount(0,10,10));
 
-		assert rm.movingCount(0,10,10)==1;
+		assert rm.movingCount(5,10,10)==21;
 
 
 	}

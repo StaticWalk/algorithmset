@@ -42,30 +42,6 @@ public class MatrixPath {
 		return false;
 	}
 
-//	private boolean hasPathCore(char[] matrix, int rows, int cols, int i, int j, char[] str, int pathLength, boolean[] visited) {
-//		if(pathLength == str.length){
-//			return true;
-//		}
-//
-//		boolean hasPath = false;
-//
-//		if ( i>=0 && j>=0 && i<rows && j<cols && matrix[j+i*cols]==str[pathLength] && !visited[j+i*cols])
-//		{
-//			pathLength++;
-//			visited[j+i*cols] = true;
-//			hasPath = hasPathCore(matrix,rows,cols,i,j-1,str,pathLength,visited)
-//					||hasPathCore(matrix,rows,cols,i+1,j,str,pathLength,visited)
-//					||hasPathCore(matrix,rows,cols,i-1,j,str,pathLength,visited)
-//					||hasPathCore(matrix,rows,cols,i,j+1,str,pathLength,visited);
-//
-//			if (!hasPath){
-//				pathLength--;
-//				visited[j+i*cols] = false;
-//			}
-//		}
-//		return hasPath;
-//	}
-
 
 		private boolean hasPathCore(char[] matrix, int rows, int cols, int i, int j, char[] str, int pathLength, boolean[] visited) {
 
