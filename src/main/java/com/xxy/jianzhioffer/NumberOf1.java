@@ -1,5 +1,7 @@
 package com.xxy.jianzhioffer;
 
+import org.junit.Test;
+
 /**
  * Created by xiongxiaoyu
  * Data:2018/11/23
@@ -15,9 +17,9 @@ public class NumberOf1 {
 	 *
 	 *
 
-	 * 用1和n进行位与运算，
-	 * 结果要是为1则n的2进制形式
-	 * 最右边那位肯定是1，否则为0
+	 // 用1和n进行位与运算，
+	 // 结果要是为1则n的2进制形式
+     // 最右边那位肯定是1，否则为0
 
 	  	int count = 0;
 		while (n != 0) {
@@ -35,17 +37,39 @@ public class NumberOf1 {
 
 	public int NumberOf1(int n) {
 
-		int count = 0;
 
-		while (n != 0) {
-			++count;
-			n = (n - 1) & n;
+		//M0  当输入是负数的时候找不到
+		int count = 0;
+		int flag = 1;
+		while (flag !=0 ){
+
+			if ((n&flag)!=0){
+				count++;
+			}
+			flag = flag <<1;
 		}
+
+
+		//M1
+//		int count = 0;
+//		while (n != 0) {
+//			++count;
+//			n = (n - 1) & n;
+//		}
+
 		return count;
 	}
 
-	public int back(){
-		return 0;
+
+	@Test
+	public void test(){
+
+		NumberOf1 numberOf1= new NumberOf1();
+
+		System.err.println(numberOf1.NumberOf1(-5));
+
+
 	}
+
 
 }
