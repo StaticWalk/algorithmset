@@ -16,25 +16,22 @@ public class OddEvenExchange {
 
 	public void reOrderArray(int [] array) {
 
-		//不使用辅助空间的话
-
+		//不用辅助空间的话
+		//先找到第一个偶数 然后找到之后的第一个奇数，变换位置就是
 		for (int i = 0; i < array.length; i++) {
-			if (isEven(i)){
+			if (isEven(array[i])){
 				for (int j = i+1; j < array.length; j++) {
-					if (!isEven(j)){
+					if (!isEven(array[j])){
 						int tmp = array[j];
-						for (int k = i+1; k <= j; k++) {
-							array[k]=array[k-1];
+						for (int k = j; k >i ; k--) {
+							array[k] = array[k-1];
 						}
-						array[i]=tmp;
+						array[i] = tmp;
+						break;
 					}
 				}
 			}
 		}
-
-
-
-
 
 
 		//给辅助空间的话 比较简单
