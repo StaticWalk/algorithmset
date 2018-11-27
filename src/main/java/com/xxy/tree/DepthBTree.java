@@ -19,10 +19,11 @@ public class DepthBTree {
 			return 0;
 		}
 
-		int left = TreeDepth(root.left);
-		int right = TreeDepth(root.right);
-
-		return left > right? left+1 : right+1;
+//		int left = TreeDepth(root.left);
+//		int right = TreeDepth(root.right);
+//		return left > right? left+1 : right+1;
+		//最简单写法
+		return 1+Math.max(TreeDepth(root.left),TreeDepth(root.right));
 
 	}
 
