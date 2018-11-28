@@ -108,7 +108,6 @@ public class ZhiPrintBTree {
 //	}
 
 
-
 	@Test
 	public void test(){
 		ZhiPrintBTree sb = new ZhiPrintBTree();
@@ -124,10 +123,6 @@ public class ZhiPrintBTree {
 		System.err.println( sb.Print(root));
 
 	}
-
-
-
-
 
 
 
