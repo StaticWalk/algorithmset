@@ -4,6 +4,9 @@ package com.xxy.todo;
  * Created by xiongxiaoyu
  * Data:2019/1/31
  * Time:16:41
+ *
+ * 插入排序
+ *
  */
 public class InsertionSort {
 
@@ -13,13 +16,14 @@ public class InsertionSort {
 
 		for (int i = 1; i < a.length; i++) {
 
-			int j = i-1;
 			temp = a[i];
+			int j = i-1;
 
 			while ( j>=0 && a[j]>temp ){
 				a[j+1] = a[j];
 				j--;
 			}
+
 			a[j+1]=temp;
 		}
 	}
