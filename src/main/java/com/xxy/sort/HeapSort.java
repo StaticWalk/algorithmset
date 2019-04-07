@@ -47,7 +47,7 @@ public class HeapSort {
 	 */
 	public static void maxHeapify(int[] arrays, int size) {
 
-		for (int i = size - 1; i >= 0; i--) {
+		for (int i = size/2-1; i >= 0; i--) {
 			heapify(arrays, i, size);
 		}
 	}
@@ -60,8 +60,6 @@ public class HeapSort {
 	 * @param size            节点总数
 	 */
 	public static void heapify(int[] arrays, int currentRootNode, int size) {
-
-		if (currentRootNode < size) {
 			//左子树和右字数的位置
 			int left = 2 * currentRootNode + 1;
 			int right = 2 * currentRootNode + 2;
@@ -91,7 +89,5 @@ public class HeapSort {
 				heapify(arrays, max, size);
 			}
 		}
-	}
-
 
 }

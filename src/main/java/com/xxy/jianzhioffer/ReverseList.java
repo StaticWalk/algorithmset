@@ -14,15 +14,69 @@ package com.xxy.jianzhioffer;
 
 public class ReverseList {
 
-	public ListNode ReverseList(ListNode head) {
+	public static class Node {
+		int val;
+		Node next = null;
+		Node(int val) {
+			this.val = val;
+		}
+	}
 
-		ListNode reverseHead = null;
-		ListNode node = head;
-		ListNode pre = null;
+
+	public static void main(String[] args) {
+		Node node1 = new Node(1);
+		Node node2 = new Node(2);
+		Node node3 = new Node(3);
+		node1.next = node2;
+		node2.next = node3;
+
+//		Node node = ReverseList(node1);
+
+
+		Node current = node1;
+
+		current =  current.next;
+		System.out.println(current.val);
+
+
+	}
+//		public static Node ReverseList(Node head) {
+//
+//		Node reverseHead = null;
+//		Node node = head;
+//		Node pre = null;
+//
+//		while (node != null){
+//
+//			Node next = node.next;
+//
+//			if (next == null){
+//				reverseHead = node;
+//
+//			}
+//
+//			node.next = pre;
+//			pre = node;
+//			node = next;
+//
+//		}
+//
+//		return reverseHead;
+//
+//		}
+
+
+
+
+	public static Node ReverseList(Node head) {
+
+		Node reverseHead = null;
+		Node node = head;
+		Node pre = null;
 
 		while (node != null){
 
-			ListNode next = node.next;
+			Node next = node.next;
 
 			if (next==null)
 			{
@@ -32,19 +86,7 @@ public class ReverseList {
 			pre = node;
 			node = next;
 		}
-
 		return reverseHead;
-	}
-
-
-
-	public class ListNode {
-		int val;
-		ListNode next = null;
-
-		ListNode(int val) {
-			this.val = val;
-		}
 	}
 
 }

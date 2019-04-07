@@ -53,8 +53,7 @@ public class MergeList {
 				current.next = list1;
 			}
 
-		return mergeList;
-
+		return current;
 
 	}
 

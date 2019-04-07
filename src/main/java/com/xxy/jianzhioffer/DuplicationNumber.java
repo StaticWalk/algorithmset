@@ -49,10 +49,8 @@ public class DuplicationNumber {
 		if (numbers ==null||numbers.length <= 0){
 			return false;
 		}
-
 		for (int i = 0; i < numbers.length; i++) {
 				while (numbers[i] != i){
-
 					if(numbers[i] == numbers[numbers[i]]){
 						duplication[0]=numbers[i];
 						return true;
@@ -61,20 +59,37 @@ public class DuplicationNumber {
 					numbers[numbers[i]] = numbers[i];
 					numbers[i] = tmp;
 				}
-
 		}
-
 		return false;
 
+	}
 
-
+	static int duplicate(int[] arr) {
+		if (arr.length <= 0) {
+			return 0;
+		}
+		for (int i = 0; i < arr.length; i++) {
+		while (arr[i] != i+1){
+					if (arr[i] == arr[arr[i]-1]) {
+						return arr[i];
+					}
+					int tmp = arr[arr[i]-1];
+					arr[arr[i]-1] = arr[i];
+					arr[i] = tmp;
+				}
+			}
+		return 0;
 	}
 
 	public static void main(String[] args) {
 		DuplicationNumber d=new DuplicationNumber();
-		int [] a=new int[]{2,1,3,1,4};
+		int [] a=new int[]{2,2,3,5,4};
 		int [] b=new int[]{1};
 
-		System.err.println(d.duplicate(a,5,b));
+//		System.err.println(d.duplicate(a,5,b));
+		System.out.println(duplicate(a));
+
 	}
+
+
 }

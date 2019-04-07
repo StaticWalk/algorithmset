@@ -42,20 +42,23 @@ public class NumberOf1 {
 		int count = 0;
 		int flag = 1;
 		while (flag !=0 ){
-
 			if ((n&flag)!=0){
 				count++;
 			}
 			flag = flag <<1;
 		}
 
+//		if (n < 0) {count++;}
+//		while (n!=0){
+//			count += n&1;
+//			n=n>>>1;
+//		}
 
 		//M1
-//		int count = 0;
 //		while (n != 0) {
-//			++count;
-//			n = (n - 1) & n;
-//		}
+////			++count;
+////			n = (n - 1) & n;
+////		}
 
 		return count;
 	}

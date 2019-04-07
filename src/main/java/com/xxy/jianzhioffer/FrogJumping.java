@@ -16,13 +16,12 @@ import org.junit.Test;
  */
 public class FrogJumping {
 
-	public int Solution(int target){
+	static int Jump(int target){
 		if (target <= 0){
 			return 0;
 		}
 		if(target == 1 || target == 2) {
 			return target;
-
 		}
 
 		int jumpSum = 0;
@@ -38,11 +37,8 @@ public class FrogJumping {
 	}
 
 
-
 	@Test
 	public void jumpingTest(){
-
-
 
 	}
 }
