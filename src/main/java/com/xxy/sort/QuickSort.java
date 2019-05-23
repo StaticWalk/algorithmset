@@ -39,7 +39,6 @@ public class QuickSort {
 				i++;
 				j--;
 			}
-
 		}
 
 		//对支点左边的节点再进行交换排序
@@ -58,6 +57,8 @@ public class QuickSort {
 		int[] a = new int[]{5,3,2,1,9,6,4,8};
 		QuickSort qs = new QuickSort();
 		qs.quickSort(a,0,7);
+
+//		Collections.sort(a,(o1, o2) );
 
 		for (int i = 0; i < a.length; i++) {
 			System.out.println(a[i]);

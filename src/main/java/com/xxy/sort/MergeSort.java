@@ -36,9 +36,9 @@ public class MergeSort {
 
 		//如果只有一个元素，那就不用排序了
 		if (L == R) {
+
 			return;
 		} else {
-
 			int M = (L+R)/2;
 
 			mergeSort(arrays,L,M);
@@ -92,24 +92,15 @@ public class MergeSort {
 
 		while (i < leftArray.length) {
 			arrays[k] = leftArray[i];
-
 			i++;
 			k++;
 		}
 
 		while (j < rightArray.length) {
 			arrays[k] = rightArray[j];
-
 			j++;
 			k++;
 		}
-
-
-
-
-
-
-
 
 //		//左边的数组的大小
 //		int[] leftArray = new int[M - L];

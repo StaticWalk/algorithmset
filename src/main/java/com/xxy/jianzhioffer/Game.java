@@ -1,5 +1,7 @@
 package com.xxy.jianzhioffer;
 
+import java.util.Scanner;
+
 /**
  * Created by xiongxiaoyu
  * Data:2019/3/26
@@ -22,6 +24,7 @@ public class Game {
 				x++;
 				if (x % m == 0){
 					a[i % n] = -1;
+					System.out.print(i%n+1 + " ");
 					c--;
 				}
 			}
@@ -37,9 +40,11 @@ public class Game {
 
 	public static void main(String[] args) {
 
-//		System.out.println( LastRemaining_Solution(5,3));
+		Scanner in = new Scanner(System.in);
+		int m = in.nextInt();
+		int n = in.nextInt();
+		System.out.println("\n"+(LastRemaining_Solution(m,n)+1));
 
-		System.out.println();
 	}
 
 }

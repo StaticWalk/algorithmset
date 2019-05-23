@@ -24,7 +24,6 @@ public class SubsequentTraversal {
 		if (sequence.length == 0){
 			return false;
 		}
-
 		return doWork(sequence);
 
 	}
@@ -44,7 +43,6 @@ public class SubsequentTraversal {
 				break;
 			}
 		}
-
 		for (int i = 0; i < sequence.length-1; i++) {
 			if (i<mid&&sequence[i]>end){
 				return false;

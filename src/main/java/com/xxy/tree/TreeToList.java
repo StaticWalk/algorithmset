@@ -10,7 +10,6 @@ package com.xxy.tree;
  *
  * 不能创建新的节点，
  *
- *
  */
 public class TreeToList {
 

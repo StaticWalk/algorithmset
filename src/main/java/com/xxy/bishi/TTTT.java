@@ -1,12 +1,53 @@
-//package com.xxy.bishi;
+package com.xxy.bishi;
+
+import java.util.ArrayList;
+
+/**
+ * Created by xiongxiaoyu
+ * Data:2019/3/13
+ * Time:20:17
+ */
+public class TTTT {
+
+	ArrayList<Integer> arrayList=new ArrayList<Integer>();
+	public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+		if(listNode!=null){
+			this.printListFromTailToHead(listNode.next);
+			arrayList.add(listNode.val);
+		}
+		return arrayList;
+	}
+
+
+	public static void main(String[] args) {
+
+
+//		String [] ss = new String[]{"aa","b","ac"};
 //
-///**
-// * Created by xiongxiaoyu
-// * Data:2019/3/13
-// * Time:20:17
-// */
-//public class TTTT {
+//		for (int i = 0; i <ss.length-1 ; i++) {
+//			for (int j = 0; j <ss.length-i-1; j++) {
+//				if (ss[j].length() > ss[j+1].length()){
+//					String tmp = ss[j+1];
+//					ss[j+1] = ss[j];
+//					ss[j] = tmp;
+//				}
+//			}
+//		}
 //
+//		for (int i = 0; i < ss.length; i++) {
+//			System.out.println(ss[i]);
+//		}
+
+
+//		List list = new ArrayList();
+//		list.add(5);
+//		System.out.println(list.get(9));
+
+
+	}
+
+
+
 //
 //	public static void main(String[] args) {
 //
@@ -24,22 +65,14 @@
 //	}
 //
 //
-//	public static class Node{
-//
-//		int val;
-//
-//		Node next = null;
-//
-//		public Node(int val){
-//			this.val = val;
-//		}
-//
-//		public int getVal(){
-//			return val;
-//		}
-//
-//	}
-//
+     static class ListNode {
+        int val;
+        ListNode next = null;
+
+        ListNode(int val) {
+            this.val = val;
+        }
+    }
 //	public static Node reverse(Node head) {
 //
 //		Node reverseHead = null;
@@ -86,5 +119,5 @@
 //		}
 //		System.out.println(ans);
 //	}
-//
-//}
+
+}

@@ -1,6 +1,8 @@
 package com.xxy;
 
+import java.util.Iterator;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 /**
  * Created by xiongxiaoyu
@@ -15,16 +17,33 @@ public class Main {
 	static int[] p=new int[55];
 
 	public static void main(String[] args) {
+
 		Scanner scanner=new Scanner(System.in);
-		n=scanner.nextInt();
-		for (int i=0;i<n;i++){
-			d[i]=scanner.nextInt();
+
+		int n = scanner.nextInt();
+		if (n <=0){
+			return;
 		}
-		for (int i=0;i<n;i++){
-			p[i]=scanner.nextInt();
+
+		TreeSet set  = new TreeSet();
+		for (int i = 0; i <n ; i++) {
+			set.add(scanner.next());
 		}
-		func(0,0,0);
-		System.out.println(sum);
+
+		Iterator ite = set.iterator();
+		while (ite.hasNext()){
+			System.out.println(ite.next());
+		}
+
+//		n=scanner.nextInt();
+//		for (int i=0;i<n;i++){
+//			d[i]=scanner.nextInt();
+//		}
+//		for (int i=0;i<n;i++){
+//			p[i]=scanner.nextInt();
+//		}
+//		func(0,0,0);
+//		System.out.println(sum);
 	}
 
 	static void func(long num,long r,long to){

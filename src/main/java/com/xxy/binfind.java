@@ -14,7 +14,6 @@ public class binfind {
 	 *  1 2 3 4 5
 	 *
 	 *
-	 *
 	 * @param
 	 * @param
 	 * @return
@@ -28,8 +27,6 @@ public class binfind {
 			return fibadd(n-1) + fibadd( n-2);
 		}
 	}
-
-
 
 	public static boolean find(int[] a, int x){
 
@@ -50,7 +47,6 @@ public class binfind {
 		}
 
 	}
-
 
 	 static int NumberOf1(int n) {
 
@@ -76,8 +72,6 @@ public class binfind {
 		return count;
 	}
 
-
-
 	static boolean findTree(String [] a){
 		for (int i = a.length/2-1; i >=0 ; i--) {
 			if (dofind(a,i)){
@@ -98,13 +92,7 @@ public class binfind {
 
 	static void mix(int x,int y){
 
-
-
-
 	}
-
-
-
 
 
 	public static void main(String[] args) {

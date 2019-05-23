@@ -24,7 +24,6 @@ public class PrintBTree {
 		if (root == null ){
 			return list;
 		}
-
 		queue.add(root);
 
 		while (queue.size()>0){

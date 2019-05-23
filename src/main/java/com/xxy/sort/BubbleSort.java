@@ -15,32 +15,32 @@ public class BubbleSort {
 
 		//冒泡
 
-		 for (int i = 0; i <a.length-1 ; i++) {
-			 for (int j = 0; j <a.length-i-1; j++) {
-				 if (a[j] > a[j+1]){
-					 int tmp = a[j+1];
-					 a[j+1] = a[j];
-					 a[j] = tmp;
-					 }
-				 }
-		 }
+//		 for (int i = 0; i <a.length-1 ; i++) {
+//			 for (int j = 0; j <a.length-i-1; j++) {
+//				 if (a[j] > a[j+1]){
+//					 int tmp = a[j+1];
+//					 a[j+1] = a[j];
+//					 a[j] = tmp;
+//					 }
+//				 }
+//		 }
 
 		//冒泡优化，如果提前排序结束，一次没有出现交换就说明交换完成了，直接结束遍历
 		//因为使用了while循环，第一个for需要换个写法
-		/**Boolean flag = true;
-		 int n = a.length;
-		 while (flag){
-		 flag = false;
-		 for (int i = 0; i < n - 1; i++) {
-		 if (a[i] > a[i + 1]) {
-		 int tmp = a[i + 1];
-		 a[i + 1] = a[i];
-		 a[i] = tmp;
-		 flag = true;
-		 }
-		 }
-		 n--;
-		 }*/
+		Boolean flag = true;
+		int n = a.length;
+		while (flag){
+			flag = false;
+			for (int i = 0; i < n - 1; i++) {
+				if (a[i] > a[i + 1]) {
+					int tmp = a[i + 1];
+					a[i + 1] = a[i];
+					a[i] = tmp;
+					flag = true;
+				}
+			}
+			n--;
+		}
 
 
 		//1000个数，前100个乱序的，后900是排列好的不需要重排。

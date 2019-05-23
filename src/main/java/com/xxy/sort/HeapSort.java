@@ -33,9 +33,9 @@ public class HeapSort {
 
 			//首个元素和未完成排序的最后一个元素交换位置
 			int temp = arrays[0];
+			System.out.println(temp);
 			arrays[0] = arrays[(arrays.length - 1) - i];
 			arrays[(arrays.length - 1) - i] = temp;
-
 		}
 
 		System.out.println(Arrays.toString(arrays));
