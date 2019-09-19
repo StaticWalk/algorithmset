@@ -65,8 +65,6 @@ public class Main {
 
 
 /**
- *
- *
  * 	Scanner in = new Scanner(System.in);
  * 			int a = in.nextInt();
  * 			String b = in.next().trim();

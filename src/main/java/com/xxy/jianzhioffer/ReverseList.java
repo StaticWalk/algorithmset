@@ -23,6 +23,27 @@ public class ReverseList {
 	}
 
 
+	public static Node ReverseList(Node head) {
+
+		Node node = head;
+		Node reverseHead = null;
+		Node pre = null;
+
+		while (node != null){
+
+			Node next = node.next;
+
+			if (next==null)
+			{
+				reverseHead = node;
+			}
+			node.next = pre;
+			pre = node;
+			node = next;
+		}
+		return reverseHead;
+	}
+
 	public static void main(String[] args) {
 		Node node1 = new Node(1);
 		Node node2 = new Node(2);
@@ -30,14 +51,16 @@ public class ReverseList {
 		node1.next = node2;
 		node2.next = node3;
 
-//		Node node = ReverseList(node1);
+		Node node = ReverseList(node1);
 
+		while (node != null){
+			System.out.println(node.val);
+			node = node.next;
+		}
 
-		Node current = node1;
-
-		current =  current.next;
-		System.out.println(current.val);
-
+//		Node current = node1;
+//		current =  current.next;
+//		System.out.println(current.val);
 
 	}
 //		public static Node ReverseList(Node head) {
@@ -68,25 +91,5 @@ public class ReverseList {
 
 
 
-	public static Node ReverseList(Node head) {
-
-		Node reverseHead = null;
-		Node node = head;
-		Node pre = null;
-
-		while (node != null){
-
-			Node next = node.next;
-
-			if (next==null)
-			{
-				reverseHead = node;
-			}
-			node.next = pre;
-			pre = node;
-			node = next;
-		}
-		return reverseHead;
-	}
 
 }

@@ -20,7 +20,6 @@ public class binfind {
 	 */
 
 	public static int fibadd(int n){
-
 		if (n <= 2 ){
 			return 1;
 		}else {

@@ -43,11 +43,13 @@ public class QuickSort {
 
 		//对支点左边的节点再进行交换排序
 		if (j>L){
+			System.out.println(L+"左 "+j);
 			quickSort(a,L,j);
 		}
 
 		//对支点右边的节点再进行交换排序
 		if (R>i){
+			System.out.println(i+"右 "+R);
 			quickSort(a,i,R);
 		}
 
@@ -58,7 +60,6 @@ public class QuickSort {
 		QuickSort qs = new QuickSort();
 		qs.quickSort(a,0,7);
 
-//		Collections.sort(a,(o1, o2) );
 
 		for (int i = 0; i < a.length; i++) {
 			System.out.println(a[i]);

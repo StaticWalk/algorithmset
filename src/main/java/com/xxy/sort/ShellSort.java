@@ -7,7 +7,6 @@ package com.xxy.sort;
  */
 public class ShellSort {
 
-
 	/**
 	 * 希尔排序
 	 *
@@ -25,9 +24,9 @@ public class ShellSort {
 				int temp = arrays[j];
 
 				// j - step 就是代表与它同组隔壁的元素
-				while (j-step>=0&&arrays[j-step]>temp){
-					arrays[j]= arrays[j-step];
-					j-=step;
+				while ( j-step >= 0 && arrays[j-step] > temp){
+					arrays[j] = arrays[j-step];
+					j -= step;
 				}
 				arrays[j]=temp;
 			}

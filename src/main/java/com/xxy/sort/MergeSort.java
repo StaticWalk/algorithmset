@@ -17,7 +17,7 @@ public class MergeSort {
 
 
 	public static void main(String[] args) {
-		int[] arrays = {  5, 2, 1, 8};
+		int[] arrays = { 5, 2, 1, 8};
 
 		mergeSort(arrays, 0, arrays.length - 1);
 
@@ -50,7 +50,6 @@ public class MergeSort {
 		}
 	}
 
-
 	/**
 	 * 合并数组
 	 * @param arrays
@@ -60,51 +59,54 @@ public class MergeSort {
 	 */
 	public static void merge(int[] arrays, int L, int M, int R) {
 
-		int[] leftArray = new int[M-L];
+		int leftArray[] = new int[M-L];
+		int rightArray[] = new int[R-M+1];
 
-		int[] rightArray = new int[R-M+1];
-
-		for (int i = L; i <M ; i++) {
+		for (int i = L; i < M; i++) {
 			leftArray[i-L] = arrays[i];
 		}
-		for (int i = M; i <R+1 ; i++) {
+		for (int i = M; i <= R; i++) {
 			rightArray[i-M] = arrays[i];
 		}
 
-		int i=0,j=0;
-
+		int i = 0,j = 0;
 		int k = L;
 
-		while (i<leftArray.length&&j<rightArray.length){
-
-			if (leftArray[i]<rightArray[j]){
-				arrays[k]=leftArray[i];
+		while (i < leftArray.length && j < rightArray.length){
+			if (leftArray[i] < rightArray[j]){
+				arrays[k] = leftArray[i];
+				k++;
 				i++;
+			}else {
+				arrays[k] = rightArray[j];
 				k++;
-			}
-			else {
-				arrays[k]=rightArray[j];
 				j++;
-				k++;
 			}
-
 		}
 
-		while (i < leftArray.length) {
+		while (i < leftArray.length){
 			arrays[k] = leftArray[i];
 			i++;
 			k++;
 		}
-
-		while (j < rightArray.length) {
+		while (j < rightArray.length){
 			arrays[k] = rightArray[j];
 			j++;
 			k++;
 		}
 
+
+
+
+
+
+
+
+
+
+
 //		//左边的数组的大小
 //		int[] leftArray = new int[M - L];
-//
 //		//右边的数组大小
 //		int[] rightArray = new int[R - M + 1];
 //

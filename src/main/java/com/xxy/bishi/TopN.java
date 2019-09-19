@@ -1,5 +1,6 @@
 package com.xxy.bishi;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -12,7 +13,7 @@ public class TopN {
 
 
 	//使用堆排序 把大的值定上去就是
-	public static int[] topk(int[] arr,int n){
+	public static ArrayList topk(int[] arr, int n){
 
 		int[] top = new int[n];
 
@@ -33,7 +34,7 @@ public class TopN {
 			}
 		}
 
-		return top;
+		return (ArrayList) Arrays.asList(top);
 	}
 
 	private static void heapify(int[] arr, int i) {
@@ -84,7 +85,7 @@ public class TopN {
 
 		int arr [] = new int[]{6,5,1,13,7};
 
-		System.out.println(Arrays.toString(topk(arr,3)));
+//		System.out.println(Arrays.toString(topk(arr,3)));
 	}
 
 
