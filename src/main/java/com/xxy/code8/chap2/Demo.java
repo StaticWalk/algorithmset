@@ -22,6 +22,7 @@ public class Demo {
     }
 
 
+
     public static <T> void forEach(List<T> list, Consumer<T> c){
         list.forEach(c);
     }
