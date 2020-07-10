@@ -39,4 +39,10 @@ lambda区别：表达式  xxx --- 语句 {xxx;}
 !!! 函数式接口和函数描述符
 Predicate<T> bool test();
 Consumer<T> void accept
-Function<T> R apply(T t)  (输入T，输出R，需要将输入对象的信息映射搭配输出时使用)
+Function<T> R apply(T t)  (输入T，输出R，需要将输入对象的信息映射搭配输出时使用) 
+
+
+
+
+
+
