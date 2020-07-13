@@ -19,6 +19,13 @@ public class Demo {
         //7 2 6
         List<Integer> l = map(Arrays.asList("lambdas","in","action"),
                 (String s) -> s.length());
+
+        System.err.println("{card.score.config.bluetooth.16:{\n" +
+                "\"guideCardScore\":0.582,\n" +
+                "\"emptyCardScore\":0.181,\n" +
+                "\"contentCardScore\":0.581\n" +
+                "}}");
+
     }
 
 

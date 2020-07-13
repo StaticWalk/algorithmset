@@ -41,6 +41,38 @@ Predicate<T> bool test();
 Consumer<T> void accept
 Function<T> R apply(T t)  (输入T，输出R，需要将输入对象的信息映射搭配输出时使用) 
 
+Stream 流只能被消费一次，可以连接起来的流操作是中间操作，关闭流的操作的是终端操作。
+生成流的方法：stream()创建穿行流  +  parallelStream()创建并行流
+中间：
+map(String::length) //map(Dish::getName)  flatMap(流扁平化！)映射每个元素到对应的结果
+filter 过滤出元素
+limit + skip(2) 获取指定数量的流
+sorted 对流进行排序
+distinct 去重
+终端：
+forEach 用来遍历流中每个数据
+count
+collect
+
+查找和匹配：
+allMatch boolean 
+anyMatch(Dish::isVegetarian) boolean 是否有一个元素能匹配给定的谓词
+noneMatch 与allMatch相对
+findFirst
+findAny Optional<List<T>> 返回当前流中的任意元素
+
+归约操作 流折叠：
+求和  int sum = numbers.stream().reduce(0,(a,b) -> a+b)
+最大值、最小值  Optional<Integer> max = numbers.stream().reduce(Integer::max)  
+
+
+
+
+
+
+
+
+
 
 
 
